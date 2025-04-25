@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bedrock Pizza</title>
+  <!-- Google Font: Lora -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base styles */
+    body { margin: 0; font-family: 'Lora', serif; background-color: #1e1e1e; color: #f5f0e7; line-height: 1.6; }
+    a { color: #d4a373; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    
+    /* Section Titles in key colour */
+    .section-intro h2,
+    .section h2 { color: #d4a373; }
+    .section { width: 100%; padding: 60px 20px; box-sizing: border-box; }
+    .section-odd { background-color: #2c2c2c; }
+    .section-even { background-color: #1e1e1e; }
+    .section-intro .container { text-align: center; }
+
+    /* Container */
+    .container { max-width: 960px; margin: 0 auto; }
+
+    /* Header */
+    header { background-color: #2c2c2c; padding: 20px 0; border-bottom: 2px solid #444; }
+    header .container { display: flex; align-items: center; justify-content: space-between; }
+    .logo-placeholder { width: 120px; height: 60px; font-size: 0.9rem; font-family: 'Lora', serif; display: flex; align-items: center; justify-content: center; background-color: #333; color: #777; }
+    .header-text { text-align: left; }
+    .header-text h1 { margin: 0; font-family: 'Lora', serif; font-size: 2.5rem; color: #e0c097; line-height: 1; text-align: right; }
+    .header-text p { margin: 5px 0 0; font-family: 'Lora', serif; font-size: 1rem; color: #ccc; }
+
+    /* CTA */
+    .btn-email { display: inline-block; margin-top: 15px; padding: 12px 25px; border: 2px solid #d4a373; border-radius: 4px; font-family: 'Lora', serif; font-weight: 700; color: #f5f0e7; }
+    .btn-email:hover { background-color: #d4a373; color: #1e1e1e; }
+
+    /* Feature Sections */
+    .features { text-align: left; }
+    .feature-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+    .feature-text { flex: 1 1 300px; padding-right: 20px; }
+    .feature-text h2 { font-family: 'Lora', serif; font-size: 2rem; color: #d4a373; margin-bottom: 10px; }
+    .feature-text ul { list-style: none; margin: 0; padding: 0; }
+    .feature-text li { margin: 8px 0; font-family: 'Lora', serif; font-size: 1.1rem; }
+    .feature-img { flex: 0 0 300px; }
+    .feature-img img { width: 100%; height: 200px; object-fit: cover; display: block; }
+
+    /* Catering Section Layout */
+    .catering .feature-content { flex-direction: row; }
+    .catering .feature-text { text-align: right; padding-left: 20px; padding-right: 0; }
+
+    /* Image Rows */
+    .image-row { display: flex; gap: 15px; justify-content: center; margin: 40px 0; }
+    .image-row img { flex: 1 1 300px; height: 250px; object-fit: cover; display: block; }
+
+    /* Gallery Grid */
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 150px; gap: 15px; }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery .large { grid-column: span 2; grid-row: span 2; }
+
+    /* Footer */
+    footer { background-color: #2c2c2c; padding: 15px 0; border-top: 2px solid #444; text-align: center; font-family: 'Lora', serif; font-size: 0.9rem; color: #777; }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 768px) {
+      header .container { flex-direction: column; text-align: center; }
+      .header-text { margin-top: 10px; }
+      .feature-content { flex-direction: column; }
+      .feature-text, .feature-img { flex: 1 1 100%; padding: 0; }
+      .feature-img img { height: auto; max-height: 300px; }
+      .image-row { flex-direction: column; margin: 20px 0; }
+      .image-row img { width: 100%; max-width: 100%; height: auto; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery .large { grid-column: auto; grid-row: auto; height: 300px; }
+      .section { padding: 40px 10px; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-placeholder">Logo Placeholder</div>
+      <div class="header-text">
+        <h1>Bedrock Pizza</h1>
+        <p>Authentic wood-fired pizza from a van</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick Intro & CTA -->
+  <section class="section section-odd section-intro">
+    <div class="container">
+      <h2>Welcome to Bedrock Pizza</h2>
+      <p>Available for private bookings please email info@bedrockpizza.co.uk with some details about your event and budget.</p>
+      <a href="mailto:" class="btn-email">Get in Touch for Enquiries</a>
+    </div>
+  </section>
+
+  <!-- Image Row below Section 1 -->
+  <section class="section section-even">
+    <div class="container">
+      <div class="image-row">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_008.jpg" alt="Pizza Preparation">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_010-1024x771.jpg" alt="Fresh Dough">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_002.jpg" alt="Wood-Fired Oven">
+      </div>
+    </div>
+  </section>
+
+    <!-- New Passion Section -->
+    <section class="section section-odd section-passion">
+        <div class="container" style="text-align:center;">
+          <h2>A passion for perfect pizza</h2>
+          <p>The pizza van was built out of a passion for proper wood fired pizza. It was very scarce back in 2020 and you couldn’t go to a restaurant anyway. Street food was needed and a pizza van was a great idea at the time – and still is.</p>
+        </div>
+      </section>
+
+  <!-- Section 2 Catering -->
+  <section class="section section-even features catering">
+    <div class="container feature-content">
+      <div class="feature-img">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_006.jpg" alt="Bedrock Pizza Catering">
+      </div>
+      <div class="feature-text">
+        <h2>Catering for All Occasions</h2>
+        <ul>
+          <li>Private bookings</li>
+          <li>Corporate events</li>
+          <li>Festivals, fetes, fairs & more</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Row below Section 2 -->
+  <section class="section section-odd">
+    <div class="container">
+      <div class="image-row">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_013-1024x461.jpg" alt="Van in Action">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-001-1024x682.jpg" alt="Serving Customers">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_007.jpg" alt="Garlic Bread">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section section-even">
+    <div class="container">
+      <div class="gallery">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-Logo-001-1024x788.jpg" alt="Bedrock Pizza Logo" class="large">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_015.jpg" alt="Stone Oven Van">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_008.jpg" alt="Pizza Preparation">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_010-1024x771.jpg" alt="Fresh Dough">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_002.jpg" alt="Wood-Fired Oven">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_006.jpg" alt="Catering Event">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_013-1024x461.jpg" alt="Van in Action">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-001-1024x682.jpg" alt="Serving Customers">
+        <img src="https://bedrockpizza.co.uk/wp-content/uploads/2024/08/Bedrock_Pizza_Blackpool_Woodfired_Pizza_Van-_007.jpg" alt="Garlic Bread">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bedrock Pizza. All rights reserved.</p>
+  </footer>
+</body>
+</html>
